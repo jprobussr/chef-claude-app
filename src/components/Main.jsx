@@ -2,22 +2,22 @@ import React from 'react';
 import './Main.css';
 
 const Main = () => {
-  const ingredients = ['onion', 'turkey', 'pineapple'];
+  const ingredients = ['onion', 'turkey', 'pineapple', 'habenero'];
 
   const ingredientsList = ingredients.map((ingredient) => (
-    <li key={Math.random()}>{ingredient}</li>
+    <li key={ingredient}>{ingredient}</li>
   ));
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData(e.currentTarget);
-  //   const newIngredient = formData.get('ingredient');
-  //   ingredients.push(newIngredient);
-  //   console.log(ingredients)
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const inputData = formData.get('ingredient');
+    console.log(inputData);
+  }
+
   return (
     <main className="main">
-      <form className="add-ingredient-form">
+      <form onSubmit={handleSubmit} className="add-ingredient-form">
         <input
           className="ingredient-input"
           aria-label="Add Ingredient"
