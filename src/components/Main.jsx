@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.css';
 
 const Main = () => {
-  const ingredients = ['onion', 'turkey', 'pineapple', 'habenero'];
+  const [ingredients, setIngredients] = useState([]);
 
-  const ingredientsList = ingredients.map((ingredient) => (
-    <li key={ingredient}>{ingredient}</li>
-  ));
+  const ingredientsList = ingredients.map((item) => (
+    <li key={Math.random()}>{item}</li>
+  ))
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const inputData = formData.get('ingredient');
-    console.log(inputData);
+    setIngredients((prev) => [...prev, inputData]);
   }
 
   return (
