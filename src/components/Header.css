@@ -1,29 +1,37 @@
 .header {
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #2a2a2a;
+  background: linear-gradient(
+    135deg,
+    #1a1033,  /* deep midnight purple */
+    #2b1a4d,  /* rich eggplant */
+    #3d1f66   /* accent violet */
+  );
+  border-bottom: 1px solid rgba(124, 58, 237, 0.4); /* subtle glowing purple line */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);        /* depth */
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .header__title {
-    color: #eaeaea;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin: 0;
+  color: #e9d5ff; /* soft lavender */
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(124, 58, 237, 0.6); /* purple glow */
 }
 
 .header__logo {
-    width: 4.2rem;
-    height: auto;
+  width: 4.2rem;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(186, 85, 255, 0.5)); /* subtle neon edge */
 }
