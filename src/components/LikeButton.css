@@ -1,0 +1,28 @@
+.like-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.like-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.like-container button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.like-container button:hover {
+  transform: scale(1.05);
+}
